@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --wite: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 0%);
+}
+
+body {
+    background-color: var(--yellow);
+    min-height: 100vh;
+    font-family: 'Figtree', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.attribution { 
+    padding: 12px;
+    font-size: 20px; text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.card {
+    background-color: var(--wite);
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    outline: 1px solid #000;
+}
+
+.card::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.card img {
+    border-radius: 1rem;
+}
+
+.card .learning {
+    background-color: var(--yellow);
+    width: min-content;
+    padding: .5rem;
+    font-weight: 800;
+    border-radius: .5rem;
+}
+
+.card .date {
+    margin-top: 1rem;
+}
+
+.card h1 {
+    margin: 1rem 0;
+}
+
+.card h1 a {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.card h1 a:hover {
+    color: var(--yellow);
+}
+
+.card .description {
+    color: var(--grey);
+    line-height: 1.5;
+}
+
+.card .author {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card .author img {
+    width: 30px;
+}
+
+.card .author .name {
+    font-weight: 800;
+}
+
+@media (max-width: 375px) {
+    .card h1 a {
+        font-size: 1.25rem;
+    }
+}
